@@ -1,0 +1,370 @@
+body, html { 
+    overflow-x: hidden; 
+    overflow-y: hidden;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+button:focus {
+    outline: none;
+}
+@font-face {
+    font-family: "Pacifico";
+    src: url('Resources/Fonts/Pacifico/Pacifico-Regular.ttf');
+}
+@font-face {
+    font-family: "Ranger";
+    src: url('Resources/Fonts/Ranger_Personal_License/Ranger_Regular.ttf');
+}
+/* The texture over the whole page */
+#profile-html:before, #login-html:before, #menu-html:before, #play-now-html:before, #bf-results-html:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('Resources/TEXTURE.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    pointer-events: none;
+}
+#bottom-navbar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 8%;
+    background-color: #E78271;
+}
+#bottom-navbar > button{
+    margin-top: 1%;
+    height: 90%;
+}
+#bottom-navbar img {
+    height: 100%;
+}
+
+/* Open Page */
+#open-body {
+    text-align: center;
+    background-color: #90B29A;
+    background-image: url('Resources/Recurso\ 5.png'), url('Resources/Elements.png'), url('Resources/TEXTURE.png');
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 80%, cover, cover;
+    background-position-y: 50px, 0px, 0px;
+    background-position-x: center, center, center;
+}
+#loading-bar {
+    position: absolute;
+    bottom: 5%;
+    left: 25%;
+    height: 16px;
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: white;
+}
+#loading-bar > div {
+    background-color: #E6C974;
+    border-radius: 5px;
+    margin: 3px;
+    height: 10px;
+    width: 70%;
+}
+#back-button {
+    position: absolute;
+    top: 4%;
+    right: 4%;
+}
+#back-button > img {
+    width: 80%;
+}
+
+/* Profile Page */
+#profile-body {
+    text-align: center;
+    background-color: #E7DEAD;
+}
+#profile-pic {
+    margin-top: 10%;
+    height: 25%;
+}
+#profile-name {
+    color: #908A7D;
+    font-family: "Ranger";
+    margin-bottom: 0;
+}
+#profile-handle {
+    color: #E78271;
+    font-family: "Pacifico";
+    font-size: 80%;
+    margin-top: 0;
+}
+#button-menu {
+    margin-top: 5%;
+    height: 50%;
+}
+#button-menu > button {
+    display: block;
+    width: 100%;
+    background-color: #E7D488;
+    margin: 1% 0;
+    padding: 3% 0;
+    color: #7E7767;
+    font-family: "Pacifico";
+}
+
+/* Login Page */
+#login-body {
+    text-align: center;
+    background-color: #EADBA0;
+}
+#login-title {
+    margin: 15% 0 10% 0;
+    color: #E16C5D;
+    font-family: "Ranger";
+    font-size: 400%;
+}
+#login-form {
+    height: 35%;
+}
+#login-form > div {
+    background-color: white;
+    width: 70%;
+    padding: 3%;
+    border-radius: 30px;
+    margin: 10% auto;
+}
+#login-form label {
+    color: #E16C5D;
+    font-family: "Ranger";
+}
+#login-form input[type=password], input[type=text] {
+    width: 80%;
+    border: 0;
+    border-bottom: 1px solid #7C766A;
+    background-color: transparent;
+    margin-top: 5%;
+}
+#login-form input:focus {
+    outline: none;
+}
+#username-div {
+    box-shadow: 10px 10px 0 0px #E8CA72;
+}
+#password-div {
+    box-shadow: -10px 10px 0 0px #E8CA72;
+}
+#login-form input[type=submit] {
+    width: 50px;
+    height: 50px;
+    background-color: #90B29A;
+    font-family: "Ranger";
+    border: 0;
+    border-radius: 25px;
+    color: white;
+}
+#login-body > p {
+    font-family: "Pacifico";
+    color: #7C766A;
+    margin-top: 15%;
+}
+#login-body > button {
+    background-color: white;
+    font-family: "Ranger";
+    color: #90B29A;
+    height: 30px;
+    width: 40%;
+    border-radius: 15px;
+}
+#bottom-stripes {
+    margin: 10% auto 0 auto;
+    width: 35%;
+    height: 100%;
+}
+.bottom-stripe {
+    display: inline-block;
+    width: 15px;
+    height: 100%;
+}
+#stripe2, #stripe3, #stripe4, #stripe5 {
+    margin: 0 1%;
+}
+#stripe1 {
+    margin-right: 1%;
+    background-color: #90B29A;
+}
+#stripe2 {
+    background-color: #E8CA72;
+}
+#stripe3 {
+    background-color: #E78271;
+}
+#stripe4 {
+    background-color: #7C766A;
+}
+#stripe5 {
+    background-color: #E8CA72;
+}
+#stripe6 {
+    margin-left: 1%;
+    background-color: #E78271;
+}
+
+/* Menu Page */
+#menu-body {
+    text-align: center;
+    background-color: #90B29A;
+}
+#menu-body > button {
+    display: block;
+    width: 80%;
+    height: 10%;
+    margin: 10% auto;
+    background-color: #E7DEAD;
+    padding: 5%;
+    font-family: "Ranger";
+    color: #908A7D;
+    font-size: 25;
+    border-radius: 20px;
+}
+#play-now-button {
+    margin-top: 30% !important;
+    font-size: 40 !important;
+    color: #90B29A !important;
+    height: 15% !important;
+    box-shadow:0px 0px 0px 10px #E8CA72 inset;
+}
+
+/* Play Now Page */
+#play-now-body {
+    text-align: center;
+    background-color: #EADBA0;
+}
+#search, #random{
+    display: block;
+    width: 85%;
+    height: 20%;
+    border-radius: 30px;
+    font-family: "Ranger";
+    font-size: 35;
+}
+#search {
+    background-color: #90B29A;
+    box-shadow: 10px 10px 0 0px white;
+    margin: 30% 0 20% 0;
+}
+#random {
+    background-color: #E8CA72;
+    box-shadow: -10px 10px 0 0px white;
+    margin-left: 15%;
+}
+#left-wall, #right-wall {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    width: 4%;
+    height: 100%;
+}
+#left-wall {
+    left: 0;
+    background-color: #90B29A;
+}
+#right-wall {
+    right: 0;
+    background-color: #E8CA72;
+}
+
+/* BF Results Page */
+#bf-results-body {
+    text-align: center;
+    height: 100%;
+    background-color: #90B29A;
+}
+#results {
+    width: 60%;
+    color: #EADBA0;
+    margin: 15% auto 0 auto;
+    text-align: left;
+    font-family: "Ranger";
+}
+#bf {
+    font-size: 30;
+    margin: 0;
+}
+#latest {
+    font-size: 35;
+    margin: 0;
+}
+#bf-top-stripes {
+    margin: 2% auto 2% auto;
+    width: 60%;
+    height: 20%;
+}
+#bf-bottom-stripes {
+    margin: 2% auto 0 auto;
+    width: 60%;
+    height: 100%;
+    overflow-y:hidden;
+    display: inline-block;
+}
+.bf-stripe {
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+}
+#bf-stripe1 {
+    margin-right: 4%;
+    background-color: #EADBA0;
+}
+#bf-stripe2 {
+    margin-right: 4%;
+    background-color: #7C766A;
+}
+#bf-stripe3 {
+    margin-right: 4%;
+    background-color: #E8CA72;
+}
+#bf-stripe4 {
+    background-color: #E78271;
+}
+#latest-friends-list > div {
+    clear: both;
+    display: inline-block;
+    width: 60%;
+    padding: 0 20%;
+    font-family: "Pacifico";
+    margin: 2% 0;
+}
+#latest-friends-list-yulita {
+    background-color: #EADBA0;
+}
+#latest-friends-list-yulita > .latest-friends-list-name {
+    color: #E16C5D;
+}
+#latest-friends-list-ana {
+    background-color: #E78271;
+}
+#latest-friends-list-ana > .latest-friends-list-name {
+    color: #EADBA0;
+}
+#latest-friends-list-marina {
+    background-color: #7C766A;
+}
+#latest-friends-list-marina > .latest-friends-list-name {
+    color: #E8CA72;
+}
+.latest-friends-list-points {
+    color: white;
+    font-size: 35;
+    float: right;
+}
+.latest-friends-list-name {
+    font-size: 30;
+    float: left;
+}
