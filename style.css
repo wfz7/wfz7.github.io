@@ -24,7 +24,7 @@ button:focus {
     src: url('Resources/Fonts/Ranger_Personal_License/Ranger_Regular.ttf');
 }
 /* The texture over the whole page */
-#profile-html:before, #login-html:before, #menu-html:before, #play-now-html:before, #bf-results-html:before {
+html:before {
     content: '';
     position: absolute;
     width: 100%;
@@ -33,6 +33,9 @@ button:focus {
     background-repeat: no-repeat;
     background-size: cover;
     pointer-events: none;
+}
+#open-html:before {
+    all: unset;
 }
 #bottom-navbar {
     position: absolute;
@@ -367,4 +370,50 @@ button:focus {
 .latest-friends-list-name {
     font-size: 30;
     float: left;
+}
+
+/* Results Page */
+#results-body {
+    text-align: center;
+    height: 100%;
+    background-color: #90B29A;
+    font-family: "Ranger";
+}
+#results-body > h3 {
+    font-size: 30;
+    margin: 20% 0 0 0;
+    color: #FBF8F4;
+}
+#results-body p {
+    margin: 0;
+}
+.results-result-outcome {
+    width: 60%;
+    height: 50px;
+    margin: 6% auto 4% auto;
+    border-radius: 25px;
+    line-height: 50px;
+    font-size: 20;
+}
+.results-result-name {
+    width: 100%;
+    background-color: white;
+    font-family: "Pacifico";
+    font-size: 15;
+}
+#results-body > div:nth-of-type(1) > .results-result-outcome {
+    background-color: #E8CA72;
+    color: #E16C5D;
+}
+#results-body > div:nth-of-type(2) > .results-result-outcome {
+    background-color: #E8CA72;
+    color: #7C766A;
+}
+#results-body > div:nth-of-type(3) > .results-result-outcome {
+    background-color: #EADBA0;
+    color: #E16C5D;
+}
+#results-body > div:nth-of-type(4) > .results-result-outcome {
+    background-color: #E16C5D;
+    color: #EADBA0;
 }
