@@ -185,36 +185,36 @@ html:before {
     width: 40%;
     border-radius: 15px;
 }
-#bottom-stripes {
+#login-bottom-stripes {
     margin: 10% auto 0 auto;
     width: 35%;
     height: 100%;
 }
-.bottom-stripe {
+.login-bottom-stripe {
     display: inline-block;
     width: 15px;
     height: 100%;
 }
-#stripe2, #stripe3, #stripe4, #stripe5 {
+#login-stripe2, #login-stripe3, #login-stripe4, #login-stripe5 {
     margin: 0 1%;
 }
-#stripe1 {
+#login-stripe1 {
     margin-right: 1%;
     background-color: #90B29A;
 }
-#stripe2 {
+#login-stripe2 {
     background-color: #E8CA72;
 }
-#stripe3 {
+#login-stripe3 {
     background-color: #E78271;
 }
-#stripe4 {
+#login-stripe4 {
     background-color: #7C766A;
 }
-#stripe5 {
+#login-stripe5 {
     background-color: #E8CA72;
 }
-#stripe6 {
+#login-stripe6 {
     margin-left: 1%;
     background-color: #E78271;
 }
@@ -416,4 +416,159 @@ html:before {
 #results-body > div:nth-of-type(4) > .results-result-outcome {
     background-color: #E16C5D;
     color: #EADBA0;
+}
+
+/* Win Page */
+#win-body {
+    text-align: center;
+    height: 100%;
+    background-color: #90B29A;
+    font-family: "Ranger";
+}
+#you-win {
+    width: 80%;
+    height: 100px;
+    margin: 40% auto 0 auto;
+    background-color: #E8CA72;
+    color: #E16C5D;
+    box-shadow: 10px 10px 0 0px #EADBA0;
+    border-radius: 50px;
+    line-height: 100px;
+    font-size: 40;
+}
+#win-bottom-stripes {
+    margin: 20% auto 0 auto;
+    width: 70%;
+    height: 100%;
+}
+.win-bottom-stripe {
+    display: inline-block;
+    width: 10%;
+    height: 100%;
+}
+#win-stripe2, #win-stripe3, #win-stripe4, #win-stripe5 {
+    margin: 0 1%;
+}
+#win-stripe1 {
+    margin-right: 1%;
+    background-color: #EADBA0;
+}
+#win-stripe2 {
+    background-color: #E8CA72;
+}
+#win-stripe3 {
+    background-color: #E78271;
+}
+#win-stripe4 {
+    background-color: #7C766A;
+}
+#win-stripe5 {
+    background-color: #E8CA72;
+}
+#win-stripe6 {
+    margin-left: 1%;
+    background-color: #E78271;
+}
+
+/* Lose Page */
+#lose-body {
+    text-align: center;
+    height: 100%;
+    background-color: #7C766A;
+    font-family: "Ranger";
+}
+#you-lose {
+    width: 80%;
+    height: 100px;
+    margin: 40% auto 0 auto;
+    background-color: #E8CA72;
+    color: #E16C5D;
+    box-shadow: 10px 10px 0 0px #90B29A;
+    border-radius: 50px;
+    line-height: 100px;
+    font-size: 40;
+}
+#lose-middle-stripes, #lose-bottom-stripes {
+    margin: 10% auto 10% auto;
+    width: 70%;
+}
+#lose-middle-stripes {
+    height: 10%;
+}
+#lose-bottom-stripes {
+    height: 100%;
+}
+.lose-middle-stripe, .lose-bottom-stripe {
+    display: inline-block;
+    width: 10%;
+    height: 100%;
+}
+#lose-stripe2, #lose-stripe3, #lose-stripe4, #lose-stripe5 {
+    margin: 0 1%;
+}
+#lose-stripe1 {
+    margin-right: 1%;
+    background-color: #EADBA0;
+}
+#lose-stripe2 {
+    background-color: #E8CA72;
+}
+#lose-stripe3 {
+    background-color: #E78271;
+}
+#lose-stripe4 {
+    background-color: #90B29A;
+}
+#lose-stripe5 {
+    background-color: #E8CA72;
+}
+#lose-stripe6 {
+    margin-left: 1%;
+    background-color: #E78271;
+}
+#maybe-next-time {
+    width: 100%;
+    height: 100px;
+    color: white;
+    font-family: "Pacifico";
+    background-color: #90B29A;
+    line-height: 100px;
+}
+
+/* Category Pages */
+#category-body {
+    text-align: center;
+    height: 100%;
+    background-color: #E7D69D;
+    font-family: "Ranger";
+}
+#category-body > img {
+    width: 50%;
+    margin: 40% 0 20% 0;
+}
+#category-body > h2 {
+    font-size: 40;
+    color: #827B6C;
+}
+#category-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Settings Page */
+#settings-body {
+    text-align: center;
+    height: 100%;
+    background-color: #DE6E5E;
+    font-family: "Ranger";
+}
+#settings-title {
+    margin: 20% 0 0 0;
+    color: #E8CA72;
+    font-size: 40;
+}
+#settings-body > #bottom-navbar {
+    background-color: #92AE94;
 }
