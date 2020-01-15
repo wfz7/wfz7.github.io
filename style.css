@@ -572,3 +572,149 @@ html:before {
 #settings-body > #bottom-navbar {
     background-color: #92AE94;
 }
+
+
+/* Geography Pages */
+#category-body {
+    text-align: center;
+    height: 100%;
+    background-color: #E7D69D;
+    font-family: "Ranger";
+}
+#category-body > img {
+    width: 50%;
+    margin: 30% 0 10% 0;
+}
+#category-body > h2 {
+    font-size: 40;
+    color: #827B6C;
+}
+#category-footer {
+    position: absolute;
+    bottom: -10;
+    left: 0;
+    width: 100%;
+}
+
+/* Art Pages */
+#category-body {
+    text-align: center;
+    height: 100%;
+    background-color: #92AE94;
+    font-family: "Ranger";
+}
+#category-body > img {
+    width: 30%;
+    margin: 30% 0 10% 0;
+}
+#category-body > h2 {
+    font-size: 40;
+    color: #E7D69D;
+    border-color: #E8CA72;
+}
+#category-footer {
+    position: absolute;
+    bottom: -10;
+    left: 0;
+    width: 100%;
+}
+
+/* Entertainment Pages */
+#category-body {
+    text-align: center;
+    height: 100%;
+    background-color: #DE6E5E;
+    font-family: "Ranger";
+}
+#category-body > img {
+    width: 50%;
+    margin: 30% 0 10% 0;
+}
+#category-body > h2 {
+    font-size: 40;
+    color: #E7D69D;
+    border-color: #E8CA72;
+}
+#category-footer {
+    position: absolute;
+    bottom: -10;
+    left: 0;
+    width: 100%;
+}
+
+/* Sports Pages */
+#category-body {
+    text-align: center;
+    height: 100%;
+    background-color: #E4C670;
+    font-family: "Ranger";
+}
+#category-body > img {
+    width: 50%;
+    margin: 30% 0 10% 0;
+}
+#category-body > h2 {
+    font-size: 40;
+    color: #E7D69D;
+    border-color: #DE6E5E;
+}
+#category-footer {
+    position: absolute;
+    bottom: -10;
+    left: 0;
+    width: 100%;
+}
+
+
+/* Geography q1 */
+#h2 {
+    text-align: center;
+    height: 100%;
+    background-color: #90B29A;
+    font-family: "Ranger";
+}
+#you-win {
+    width: 80%;
+    height: 100px;
+    margin: 40% auto 0 auto;
+    background-color: #E8CA72;
+    color: #E16C5D;
+    box-shadow: 10px 10px 0 0px #EADBA0;
+    border-radius: 50px;
+    line-height: 100px;
+    font-size: 40;
+}
+#win-bottom-stripes {
+    margin: 20% auto 0 auto;
+    width: 70%;
+    height: 100%;
+}
+.win-bottom-stripe {
+    display: inline-block;
+    width: 10%;
+    height: 100%;
+}
+
+
+#win-stripe2, #win-stripe3, #win-stripe4, #win-stripe5 {
+    margin: 0 1%;
+}
+#win-stripe1 {
+    margin-right: 1%;
+    background-color: #EADBA0;
+}
+#win-stripe2 {
+    background-color: #E8CA72;
+}
+#win-stripe3 {
+    background-color: #E78271;
+}
+#win-stripe4 {
+    background-color: #7C766A;
+}
+#win-stripe5 {
+    background-color: #E8CA72;
+}
+#win-stripe6 {
+    margin-left: 1%;
+    background-color: #E78271;
