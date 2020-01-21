@@ -386,34 +386,27 @@
         font-family: "Ranger";
     }
     #results-body > h3 {
-        font-size: 30;
-        margin: 10% 0 0 0;
+        font-size: 34;
+        margin: 30% 0 20% 0;
         color: #FBF8F4;
     }
     #results-body p {
         margin: 0;
     }
     .results-result-outcome {
-        width: 60%;
-        height: 50px;
-        margin: 6% auto 4% auto;
-        border-radius: 25px;
-        line-height: 50px;
-        font-size: 20;
-    }
-    .results-result-name {
         width: 100%;
-        background-color: white;
-        font-family: "Pacifico";
-        font-size: 15;
+        height: 50px;
+        margin: 10% auto 10% auto;
+        line-height: 50px;
+        font-size: 22;
     }
     #results-body > div:nth-of-type(1) > .results-result-outcome {
         background-color: #E8CA72;
         color: #E16C5D;
     }
     #results-body > div:nth-of-type(2) > .results-result-outcome {
-        background-color: #E8CA72;
-        color: #7C766A;
+        background-color: #7C766A;
+        color: #EADBA0;
     }
     #results-body > div:nth-of-type(3) > .results-result-outcome {
         background-color: #EADBA0;
@@ -1377,7 +1370,7 @@
         font-family: "Ranger";
     }
     #results-body > h3 {
-        font-size: 30;
+        font-size: 34;
         margin: 10% 0 0 0;
         color: #FBF8F4;
     }
@@ -1385,26 +1378,19 @@
         margin: 0;
     }
     .results-result-outcome {
-        width: 60%;
-        height: 50px;
-        margin: 6% auto 4% auto;
-        border-radius: 25px;
-        line-height: 50px;
-        font-size: 20;
-    }
-    .results-result-name {
         width: 100%;
-        background-color: white;
-        font-family: "Pacifico";
-        font-size: 15;
+        height: 50px;
+        margin: 5% auto 5% auto;
+        line-height: 50px;
+        font-size: 22;
     }
     #results-body > div:nth-of-type(1) > .results-result-outcome {
         background-color: #E8CA72;
         color: #E16C5D;
     }
     #results-body > div:nth-of-type(2) > .results-result-outcome {
-        background-color: #E8CA72;
-        color: #7C766A;
+        background-color: #7C766A;
+        color: #EADBA0;
     }
     #results-body > div:nth-of-type(3) > .results-result-outcome {
         background-color: #EADBA0;

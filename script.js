@@ -28,22 +28,22 @@ user_results = {
     1: [
         {
             "outcome": "won",
-            "result": "3 : 1",
+            "result": "3 , 1",
             "name": "MARINA"
         },
         {
             "outcome": "lost",
-            "result": "0 : 4",
+            "result": "0 , 4",
             "name": "YULITA"
         },
         {
             "outcome": "tie",
-            "result": "2 : 2",
+            "result": "2 , 2",
             "name": "ANA"
         },
         {
             "outcome": "won",
-            "result": "3 : 1",
+            "result": "3 , 1",
             "name": "MARINA"
         },
     ]
@@ -163,17 +163,12 @@ function load_bf_results() {
 // Used in results.html
 function load_results() {
     var outcomes = $(".results-result-outcome");
-    var names = $(".results-result-name");
     for (let i = 0; i < outcomes.length; i++) {
         var text;
-        outcome = user_results[localStorage.userid][i]["outcome"];
         result = user_results[localStorage.userid][i]["result"];
         name = user_results[localStorage.userid][i]["name"];
-        if (outcome == 'won') text = "YOU WON "
-        else if (outcome == 'lost') text = "YOU LOST "
-        else text = "IT'S A TIE ";
-        outcomes[i].innerHTML = "<p>" + text + result + "</p>";
-        names[i].innerHTML = "<p>" + name + "</p>";
+        text = "YOU " + result + " AGAINST " + name;
+        outcomes[i].innerHTML = "<p>" + text + "</p>";
     }
     
 }
