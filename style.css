@@ -1,893 +1,1967 @@
-body, html { 
-    overflow-x: hidden; 
-    overflow-y: hidden;
-}
-body {
-    margin: 0;
-    padding: 0;
-}
-button {
-    background: transparent;
-    border: none;
-    padding: 0;
-    margin: 0;
-}
-button:focus {
-    outline: none;
-}
-@font-face {
-    font-family: "Pacifico";
-    src: url('Resources/Fonts/Pacifico/Pacifico-Regular.ttf');
-}
-@font-face {
-    font-family: "Ranger";
-    src: url('Resources/Fonts/Ranger_Personal_License/Ranger_Regular.ttf');
-}
-/* The texture over the whole page */
-html:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url('Resources/TEXTURE.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    pointer-events: none;
-}
-#open-html:before {
-    all: unset;
-}
-#bottom-navbar {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 8%;
-    background-color: #E78271;
-    text-align: center;
-}
-#bottom-navbar > button{
-    margin-top: 1%;
-    height: 90%;
-}
-#bottom-navbar img {
-    height: 100%;
-}
+@media screen and (max-width: 767px) and (orientation: portrait) {
+    body, html { 
+        overflow-x: hidden; 
+        overflow-y: hidden;
+    }
+    #settings-html, #settings-body, #profile-html, #profile-body {
+        overflow-x: initial !important;
+        overflow-y: initial !important;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    button {
+        background: transparent;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    button:focus {
+        outline: none;
+    }
+    @font-face {
+        font-family: "Pacifico";
+        src: url('Resources/Fonts/Pacifico/Pacifico-Regular.ttf');
+    }
+    @font-face {
+        font-family: "Ranger";
+        src: url('Resources/Fonts/Ranger_Personal_License/Ranger_Regular.ttf');
+    }
+    /* The texture over the whole page */
+    html:before {
+        content: '';
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-image: url('Resources/TEXTURE.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        pointer-events: none;
+    }
+    #open-html:before {
+        all: unset;
+    }
+    #bottom-navbar {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 8%;
+        background-color: #E78271;
+        text-align: center;
+    }
+    #bottom-navbar > button{
+        margin-top: 1%;
+        height: 90%;
+    }
+    #bottom-navbar img {
+        height: 100%;
+    }
 
-/* Open Page */
-#open-body {
-    text-align: center;
-    background-color: #90B29A;
-    background-image: url('Resources/Recurso\ 5.png'), url('Resources/Elements.png'), url('Resources/TEXTURE.png');
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-size: 80%, cover, cover;
-    background-position-y: 50px, 0px, 0px;
-    background-position-x: center, center, center;
-}
-#loading-bar {
-    position: absolute;
-    bottom: 5%;
-    left: 25%;
-    height: 16px;
-    width: 50%;
-    border: 1px solid black;
-    border-radius: 8px;
-    background-color: white;
-}
-#loading-bar > div {
-    background-color: #E6C974;
-    border-radius: 5px;
-    margin: 3px;
-    height: 10px;
-    width: 70%;
-}
-#back-button {
-    position: absolute;
-    top: 4%;
-    right: 4%;
-}
-#back-button > img {
-    width: 80%;
-}
+    /* Open Page */
+    #open-body {
+        text-align: center;
+        background-color: #90B29A;
+        background-image: url('Resources/Recurso\ 5.png'), url('Resources/Elements.png'), url('Resources/TEXTURE.png');
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-size: 80%, cover, cover;
+        background-position-y: 50px, 0px, 0px;
+        background-position-x: center, center, center;
+    }
+    #loading-bar {
+        position: absolute;
+        bottom: 5%;
+        left: 25%;
+        height: 16px;
+        width: 50%;
+        border: 1px solid black;
+        border-radius: 8px;
+        background-color: white;
+    }
+    #loading-bar > div {
+        background-color: #E6C974;
+        border-radius: 5px;
+        margin: 3px;
+        height: 10px;
+        width: 70%;
+    }
+    #back-button {
+        position: absolute;
+        top: 4%;
+        right: 4%;
+    }
+    #back-button > img {
+        width: 80%;
+    }
 
-/* Profile Page */
-#profile-body {
-    text-align: center;
-    background-color: #E7DEAD;
-}
-#profile-pic {
-    margin-top: 10%;
-    height: 25%;
-}
-#profile-name {
-    color: #908A7D;
-    font-family: "Ranger";
-    margin-bottom: 0;
-}
-#profile-handle {
-    color: #E78271;
-    font-family: "Pacifico";
-    font-size: 80%;
-    margin-top: 0;
-}
-#button-menu {
-    margin-top: 5%;
-    height: 50%;
-}
-#button-menu > button {
-    display: block;
-    width: 100%;
-    background-color: #E7D488;
-    margin: 1% 0;
-    padding: 3% 0;
-    color: #7E7767;
-    font-family: "Pacifico";
-}
+    /* Profile Page */
+    #profile-body {
+        text-align: center;
+        background-color: #E7DEAD;
+    }
+    #profile-pic {
+        margin-top: 8%;
+        height: 25%;
+    }
+    #profile-name {
+        color: #908A7D;
+        font-family: "Ranger";
+        margin-bottom: 0;
+    }
+    #profile-handle {
+        color: #E78271;
+        font-family: "Pacifico";
+        font-size: 80%;
+        margin-top: 0;
+    }
+    #button-menu {
+        margin-top: 5%;
+        height: 50%;
+    }
+    #button-menu > button {
+        display: block;
+        width: 100%;
+        background-color: #E7D488;
+        margin: 1% 0;
+        padding: 3% 0;
+        color: #7E7767;
+        font-family: "Pacifico";
+    }
 
-/* Login Page */
-#login-body {
-    text-align: center;
-    background-color: #EADBA0;
-}
-#login-title {
-    margin: 15% 0 10% 0;
-    color: #E16C5D;
-    font-family: "Ranger";
-    font-size: 400%;
-}
-#login-form {
-    height: 35%;
-}
-#login-form > div {
-    background-color: white;
-    width: 70%;
-    padding: 3%;
-    border-radius: 30px;
-    margin: 10% auto;
-}
-#login-form label {
-    color: #E16C5D;
-    font-family: "Ranger";
-}
-#login-form input[type=password], input[type=text] {
-    width: 80%;
-    border: 0;
-    border-bottom: 1px solid #7C766A;
-    background-color: transparent;
-    margin-top: 5%;
-}
-#login-form input:focus {
-    outline: none;
-}
-#username-div {
-    box-shadow: 10px 10px 0 0px #E8CA72;
-}
-#password-div {
-    box-shadow: -10px 10px 0 0px #E8CA72;
-}
-#login-form input[type=submit] {
-    width: 50px;
-    height: 50px;
-    background-color: #90B29A;
-    font-family: "Ranger";
-    border: 0;
-    border-radius: 25px;
-    color: white;
-}
-#login-body > p {
-    font-family: "Pacifico";
-    color: #7C766A;
-    margin-top: 15%;
-}
-#login-body > button {
-    background-color: white;
-    font-family: "Ranger";
-    color: #90B29A;
-    height: 30px;
-    width: 40%;
-    border-radius: 15px;
-}
-#login-bottom-stripes {
-    margin: 10% auto 0 auto;
-    width: 35%;
-    height: 100%;
-}
-.login-bottom-stripe {
-    display: inline-block;
-    width: 15px;
-    height: 100%;
-}
-#login-stripe2, #login-stripe3, #login-stripe4, #login-stripe5 {
-    margin: 0 1%;
-}
-#login-stripe1 {
-    margin-right: 1%;
-    background-color: #90B29A;
-}
-#login-stripe2 {
-    background-color: #E8CA72;
-}
-#login-stripe3 {
-    background-color: #E78271;
-}
-#login-stripe4 {
-    background-color: #7C766A;
-}
-#login-stripe5 {
-    background-color: #E8CA72;
-}
-#login-stripe6 {
-    margin-left: 1%;
-    background-color: #E78271;
-}
+    /* Login Page */
+    #login-body {
+        text-align: center;
+        background-color: #EADBA0;
+    }
+    #login-title {
+        margin: 15% 0 10% 0;
+        color: #E16C5D;
+        font-family: "Ranger";
+        font-size: 400%;
+    }
+    #login-form {
+        height: 35%;
+    }
+    #login-form > div {
+        background-color: white;
+        width: 70%;
+        padding: 3%;
+        border-radius: 30px;
+        margin: 10% auto;
+    }
+    #login-form label {
+        color: #E16C5D;
+        font-family: "Ranger";
+    }
+    #login-form input[type=password], input[type=text] {
+        width: 80%;
+        border: 0;
+        border-bottom: 1px solid #7C766A;
+        background-color: transparent;
+        margin-top: 5%;
+    }
+    #login-form input:focus {
+        outline: none;
+    }
+    #username-div {
+        box-shadow: 10px 10px 0 0px #E8CA72;
+    }
+    #password-div {
+        box-shadow: -10px 10px 0 0px #E8CA72;
+    }
+    #login-form input[type=submit] {
+        width: 50px;
+        height: 50px;
+        background-color: #90B29A;
+        font-family: "Ranger";
+        border: 0;
+        border-radius: 25px;
+        color: white;
+    }
+    #login-body > p {
+        font-family: "Pacifico";
+        color: #7C766A;
+        margin-top: 15%;
+    }
+    #login-body > button {
+        background-color: white;
+        font-family: "Ranger";
+        color: #90B29A;
+        height: 30px;
+        width: 40%;
+        border-radius: 15px;
+    }
+    #login-bottom-stripes {
+        margin: 10% auto 0 auto;
+        width: 35%;
+        height: 100%;
+    }
+    .login-bottom-stripe {
+        display: inline-block;
+        width: 15px;
+        height: 100%;
+    }
+    #login-stripe2, #login-stripe3, #login-stripe4, #login-stripe5 {
+        margin: 0 1%;
+    }
+    #login-stripe1 {
+        margin-right: 1%;
+        background-color: #90B29A;
+    }
+    #login-stripe2 {
+        background-color: #E8CA72;
+    }
+    #login-stripe3 {
+        background-color: #E78271;
+    }
+    #login-stripe4 {
+        background-color: #7C766A;
+    }
+    #login-stripe5 {
+        background-color: #E8CA72;
+    }
+    #login-stripe6 {
+        margin-left: 1%;
+        background-color: #E78271;
+    }
 
-/* Menu Page */
-#menu-body {
-    text-align: center;
-    background-color: #90B29A;
-}
-#menu-body > button {
-    display: block;
-    width: 80%;
-    height: 10%;
-    margin: 10% auto;
-    background-color: #E7DEAD;
-    padding: 5%;
-    font-family: "Ranger";
-    color: #908A7D;
-    font-size: 25;
-    border-radius: 20px;
-}
-#play-now-button {
-    margin-top: 30% !important;
-    font-size: 40 !important;
-    color: #90B29A !important;
-    height: 15% !important;
-    box-shadow:0px 0px 0px 10px #E8CA72 inset;
-}
+    /* Menu Page */
+    #menu-body {
+        text-align: center;
+        background-color: #90B29A;
+    }
+    #menu-body > button {
+        display: block;
+        width: 80%;
+        height: 10%;
+        margin: 10% auto;
+        background-color: #E7DEAD;
+        padding: 5%;
+        font-family: "Ranger";
+        color: #908A7D;
+        font-size: 25;
+        border-radius: 20px;
+    }
+    #play-now-button {
+        margin-top: 30% !important;
+        font-size: 40 !important;
+        color: #90B29A !important;
+        height: 15% !important;
+        box-shadow:0px 0px 0px 10px #E8CA72 inset;
+    }
 
-/* Play Now Page */
-#play-now-body {
-    text-align: center;
-    background-color: #EADBA0;
-}
-#search, #random{
-    display: block;
-    width: 85%;
-    height: 20%;
-    border-radius: 30px;
-    font-family: "Ranger";
-    font-size: 35;
-}
-#search {
-    background-color: #90B29A;
-    box-shadow: 10px 10px 0 0px white;
-    margin: 30% 0 20% 0;
-}
-#random {
-    background-color: #E8CA72;
-    box-shadow: -10px 10px 0 0px white;
-    margin-left: 15%;
-}
-#left-wall, #right-wall {
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    width: 4%;
-    height: 100%;
-}
-#left-wall {
-    left: 0;
-    background-color: #90B29A;
-}
-#right-wall {
-    right: 0;
-    background-color: #E8CA72;
-}
+    /* Play Now Page */
+    #play-now-body {
+        text-align: center;
+        background-color: #EADBA0;
+    }
+    #search, #random{
+        display: block;
+        width: 85%;
+        height: 20%;
+        border-radius: 30px;
+        font-family: "Ranger";
+        font-size: 35;
+    }
+    #search {
+        background-color: #90B29A;
+        box-shadow: 10px 10px 0 0px white;
+        margin: 30% 0 20% 0;
+    }
+    #random {
+        background-color: #E8CA72;
+        box-shadow: -10px 10px 0 0px white;
+        margin-left: 15%;
+    }
+    #left-wall, #right-wall {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        width: 4%;
+        height: 100%;
+    }
+    #left-wall {
+        left: 0;
+        background-color: #90B29A;
+    }
+    #right-wall {
+        right: 0;
+        background-color: #E8CA72;
+    }
 
-/* BF Results Page */
-#bf-results-body {
-    text-align: center;
-    height: 100%;
-    background-color: #90B29A;
-}
-#results {
-    width: 60%;
-    color: #EADBA0;
-    margin: 15% auto 0 auto;
-    text-align: left;
-    font-family: "Ranger";
-}
-#bf {
-    font-size: 30;
-    margin: 0;
-}
-#latest {
-    font-size: 35;
-    margin: 0;
-}
-#bf-top-stripes {
-    margin: 2% auto 2% auto;
-    width: 60%;
-    height: 20%;
-}
-#bf-bottom-stripes {
-    margin: 2% auto 0 auto;
-    width: 60%;
-    height: 100%;
-    overflow-y:hidden;
-    display: inline-block;
-}
-.bf-stripe {
-    display: inline-block;
-    width: 20%;
-    height: 100%;
-}
-#bf-stripe1 {
-    margin-right: 4%;
-    background-color: #EADBA0;
-}
-#bf-stripe2 {
-    margin-right: 4%;
-    background-color: #7C766A;
-}
-#bf-stripe3 {
-    margin-right: 4%;
-    background-color: #E8CA72;
-}
-#bf-stripe4 {
-    background-color: #E78271;
-}
-#latest-friends-list > div {
-    clear: both;
-    display: inline-block;
-    width: 60%;
-    padding: 0 20%;
-    font-family: "Pacifico";
-    margin: 2% 0;
-}
-#latest-friends-list-yulita {
-    background-color: #EADBA0;
-}
-#latest-friends-list-yulita > .latest-friends-list-name {
-    color: #E16C5D;
-}
-#latest-friends-list-ana {
-    background-color: #E78271;
-}
-#latest-friends-list-ana > .latest-friends-list-name {
-    color: #EADBA0;
-}
-#latest-friends-list-marina {
-    background-color: #7C766A;
-}
-#latest-friends-list-marina > .latest-friends-list-name {
-    color: #E8CA72;
-}
-.latest-friends-list-points {
-    color: white;
-    font-size: 35;
-    float: right;
-}
-.latest-friends-list-name {
-    font-size: 30;
-    float: left;
-}
+    /* BF Results Page */
+    #bf-results-body {
+        text-align: center;
+        height: 100%;
+        background-color: #90B29A;
+    }
+    #results {
+        width: 60%;
+        color: #EADBA0;
+        margin: 15% auto 0 auto;
+        text-align: left;
+        font-family: "Ranger";
+    }
+    #bf {
+        font-size: 30;
+        margin: 0;
+    }
+    #latest {
+        font-size: 35;
+        margin: 0;
+    }
+    #bf-top-stripes {
+        margin: 2% auto 2% auto;
+        width: 60%;
+        height: 20%;
+    }
+    #bf-bottom-stripes {
+        margin: 2% auto 0 auto;
+        width: 60%;
+        height: 100%;
+        overflow-y:hidden;
+        display: inline-block;
+    }
+    .bf-stripe {
+        display: inline-block;
+        width: 20%;
+        height: 100%;
+    }
+    #bf-stripe1 {
+        margin-right: 4%;
+        background-color: #EADBA0;
+    }
+    #bf-stripe2 {
+        margin-right: 4%;
+        background-color: #7C766A;
+    }
+    #bf-stripe3 {
+        margin-right: 4%;
+        background-color: #E8CA72;
+    }
+    #bf-stripe4 {
+        background-color: #E78271;
+    }
+    #latest-friends-list > div {
+        clear: both;
+        display: inline-block;
+        width: 60%;
+        padding: 0 20%;
+        font-family: "Pacifico";
+        margin: 2% 0;
+    }
+    #latest-friends-list-yulita {
+        background-color: #EADBA0;
+    }
+    #latest-friends-list-yulita > .latest-friends-list-name {
+        color: #E16C5D;
+    }
+    #latest-friends-list-ana {
+        background-color: #E78271;
+    }
+    #latest-friends-list-ana > .latest-friends-list-name {
+        color: #EADBA0;
+    }
+    #latest-friends-list-marina {
+        background-color: #7C766A;
+    }
+    #latest-friends-list-marina > .latest-friends-list-name {
+        color: #E8CA72;
+    }
+    .latest-friends-list-points {
+        color: white;
+        font-size: 35;
+        float: right;
+    }
+    .latest-friends-list-name {
+        font-size: 30;
+        float: left;
+    }
 
-/* Results Page */
-#results-body {
-    text-align: center;
-    height: 100%;
-    background-color: #90B29A;
-    font-family: "Ranger";
-}
-#results-body > h3 {
-    font-size: 30;
-    margin: 20% 0 0 0;
-    color: #FBF8F4;
-}
-#results-body p {
-    margin: 0;
-}
-.results-result-outcome {
-    width: 60%;
-    height: 50px;
-    margin: 6% auto 4% auto;
-    border-radius: 25px;
-    line-height: 50px;
-    font-size: 20;
-}
-.results-result-name {
-    width: 100%;
-    background-color: white;
-    font-family: "Pacifico";
-    font-size: 15;
-}
-#results-body > div:nth-of-type(1) > .results-result-outcome {
-    background-color: #E8CA72;
-    color: #E16C5D;
-}
-#results-body > div:nth-of-type(2) > .results-result-outcome {
-    background-color: #E8CA72;
-    color: #7C766A;
-}
-#results-body > div:nth-of-type(3) > .results-result-outcome {
-    background-color: #EADBA0;
-    color: #E16C5D;
-}
-#results-body > div:nth-of-type(4) > .results-result-outcome {
-    background-color: #E16C5D;
-    color: #EADBA0;
-}
+    /* Results Page */
+    #results-body {
+        text-align: center;
+        height: 100%;
+        background-color: #90B29A;
+        font-family: "Ranger";
+    }
+    #results-body > h3 {
+        font-size: 30;
+        margin: 10% 0 0 0;
+        color: #FBF8F4;
+    }
+    #results-body p {
+        margin: 0;
+    }
+    .results-result-outcome {
+        width: 60%;
+        height: 50px;
+        margin: 6% auto 4% auto;
+        border-radius: 25px;
+        line-height: 50px;
+        font-size: 20;
+    }
+    .results-result-name {
+        width: 100%;
+        background-color: white;
+        font-family: "Pacifico";
+        font-size: 15;
+    }
+    #results-body > div:nth-of-type(1) > .results-result-outcome {
+        background-color: #E8CA72;
+        color: #E16C5D;
+    }
+    #results-body > div:nth-of-type(2) > .results-result-outcome {
+        background-color: #E8CA72;
+        color: #7C766A;
+    }
+    #results-body > div:nth-of-type(3) > .results-result-outcome {
+        background-color: #EADBA0;
+        color: #E16C5D;
+    }
+    #results-body > div:nth-of-type(4) > .results-result-outcome {
+        background-color: #E16C5D;
+        color: #EADBA0;
+    }
 
-/* Win Page */
-#win-body {
-    text-align: center;
-    height: 100%;
-    background-color: #90B29A;
-    font-family: "Ranger";
-}
-#you-win {
-    width: 80%;
-    height: 100px;
-    margin: 40% auto 0 auto;
-    background-color: #E8CA72;
-    color: #E16C5D;
-    box-shadow: 10px 10px 0 0px #EADBA0;
-    border-radius: 50px;
-    line-height: 100px;
-    font-size: 40;
-}
-#win-bottom-stripes {
-    margin: 20% auto 0 auto;
-    width: 70%;
-    height: 100%;
-}
-.win-bottom-stripe {
-    display: inline-block;
-    width: 10%;
-    height: 100%;
-}
-#win-stripe2, #win-stripe3, #win-stripe4, #win-stripe5 {
-    margin: 0 1%;
-}
-#win-stripe1 {
-    margin-right: 1%;
-    background-color: #EADBA0;
-}
-#win-stripe2 {
-    background-color: #E8CA72;
-}
-#win-stripe3 {
-    background-color: #E78271;
-}
-#win-stripe4 {
-    background-color: #7C766A;
-}
-#win-stripe5 {
-    background-color: #E8CA72;
-}
-#win-stripe6 {
-    margin-left: 1%;
-    background-color: #E78271;
-}
+    /* Win Page */
+    #win-body {
+        text-align: center;
+        height: 100%;
+        background-color: #90B29A;
+        font-family: "Ranger";
+    }
+    #you-win {
+        width: 80%;
+        height: 100px;
+        margin: 40% auto 0 auto;
+        background-color: #E8CA72;
+        color: #E16C5D;
+        box-shadow: 10px 10px 0 0px #EADBA0;
+        border-radius: 50px;
+        line-height: 100px;
+        font-size: 40;
+    }
+    #win-bottom-stripes {
+        margin: 20% auto 0 auto;
+        width: 70%;
+        height: 100%;
+    }
+    .win-bottom-stripe {
+        display: inline-block;
+        width: 10%;
+        height: 100%;
+    }
+    #win-stripe2, #win-stripe3, #win-stripe4, #win-stripe5 {
+        margin: 0 1%;
+    }
+    #win-stripe1 {
+        margin-right: 1%;
+        background-color: #EADBA0;
+    }
+    #win-stripe2 {
+        background-color: #E8CA72;
+    }
+    #win-stripe3 {
+        background-color: #E78271;
+    }
+    #win-stripe4 {
+        background-color: #7C766A;
+    }
+    #win-stripe5 {
+        background-color: #E8CA72;
+    }
+    #win-stripe6 {
+        margin-left: 1%;
+        background-color: #E78271;
+    }
 
-/* Lose Page */
-#lose-body {
-    text-align: center;
-    height: 100%;
-    background-color: #7C766A;
-    font-family: "Ranger";
-}
-#you-lose {
-    width: 80%;
-    height: 100px;
-    margin: 40% auto 0 auto;
-    background-color: #E8CA72;
-    color: #E16C5D;
-    box-shadow: 10px 10px 0 0px #90B29A;
-    border-radius: 50px;
-    line-height: 100px;
-    font-size: 40;
-}
-#lose-middle-stripes, #lose-bottom-stripes {
-    margin: 10% auto 10% auto;
-    width: 70%;
-}
-#lose-middle-stripes {
-    height: 10%;
-}
-#lose-bottom-stripes {
-    height: 100%;
-}
-.lose-middle-stripe, .lose-bottom-stripe {
-    display: inline-block;
-    width: 10%;
-    height: 100%;
-}
-#lose-stripe2, #lose-stripe3, #lose-stripe4, #lose-stripe5 {
-    margin: 0 1%;
-}
-#lose-stripe1 {
-    margin-right: 1%;
-    background-color: #EADBA0;
-}
-#lose-stripe2 {
-    background-color: #E8CA72;
-}
-#lose-stripe3 {
-    background-color: #E78271;
-}
-#lose-stripe4 {
-    background-color: #90B29A;
-}
-#lose-stripe5 {
-    background-color: #E8CA72;
-}
-#lose-stripe6 {
-    margin-left: 1%;
-    background-color: #E78271;
-}
-#maybe-next-time {
-    width: 100%;
-    height: 100px;
-    color: white;
-    font-family: "Pacifico";
-    background-color: #90B29A;
-    line-height: 100px;
-}
+    /* Lose Page */
+    #lose-body {
+        text-align: center;
+        height: 100%;
+        background-color: #7C766A;
+        font-family: "Ranger";
+    }
+    #you-lose {
+        width: 80%;
+        height: 100px;
+        margin: 40% auto 0 auto;
+        background-color: #E8CA72;
+        color: #E16C5D;
+        box-shadow: 10px 10px 0 0px #90B29A;
+        border-radius: 50px;
+        line-height: 100px;
+        font-size: 40;
+    }
+    #lose-middle-stripes, #lose-bottom-stripes {
+        margin: 10% auto 10% auto;
+        width: 70%;
+    }
+    #lose-middle-stripes {
+        height: 10%;
+    }
+    #lose-bottom-stripes {
+        height: 100%;
+    }
+    .lose-middle-stripe, .lose-bottom-stripe {
+        display: inline-block;
+        width: 10%;
+        height: 100%;
+    }
+    #lose-stripe2, #lose-stripe3, #lose-stripe4, #lose-stripe5 {
+        margin: 0 1%;
+    }
+    #lose-stripe1 {
+        margin-right: 1%;
+        background-color: #EADBA0;
+    }
+    #lose-stripe2 {
+        background-color: #E8CA72;
+    }
+    #lose-stripe3 {
+        background-color: #E78271;
+    }
+    #lose-stripe4 {
+        background-color: #90B29A;
+    }
+    #lose-stripe5 {
+        background-color: #E8CA72;
+    }
+    #lose-stripe6 {
+        margin-left: 1%;
+        background-color: #E78271;
+    }
+    #maybe-next-time {
+        width: 100%;
+        height: 100px;
+        color: white;
+        font-family: "Pacifico";
+        background-color: #90B29A;
+        line-height: 100px;
+    }
 
-/* Category Pages */
-#category-body {
-    text-align: center;
-    height: 100%;
-    background-color: #E7D69D;
-    font-family: "Ranger";
-}
-#category-body > img {
-    width: 50%;
-    margin: 30% 0 10% 0;
-}
-#category-body > h2 {
-    font-size: 40;
-    color: #827B6C;
-}
-#category-footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
+    /* Settings Page */
+    #settings-body {
+        text-align: center;
+        height: 100%;
+        background-color: #DE6E5E;
+        font-family: "Ranger";
+    }
+    #settings-title {
+        margin: 10% 0 0 0;
+        color: #E8CA72;
+        font-size: 40;
+    }
+    #settings-body > #bottom-navbar {
+        background-color: #92AE94;
+    }
+    #profile-block {
+        text-align: left;
+        background-color: #E7D69D;
+        width: 100%;
+        margin-top: 5%;
+        padding-top: 5%;
+        padding-bottom: 8%;
+    }
+    #settings-pic {
+        margin-left: 5%;
+        margin-right: 2%;
+        float: left;
+        width: 30%;
+    }
+    #profile-header {
+        background-color: #92AE94;
+        color: #7B7366;
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+        font-family: "Ranger";
+        font-size: 28;
+    }
+    #profile-social {
+        font-family: "Recurso";
+        margin: 2% 0 0 5%;
+        color: #92AE95;
+        font-size: 14;
+        line-height: 1.6;
+    }
+    #button-pic {
+        margin-top: -10px;
+        margin-right: 8%;
+        float: right;
+        -webkit-transform: rotate(180deg);
+        width: 20px;
+    }
+    #preferences-block {
+        background-color: #E7D69D;
+        width: 100%;
+        margin-top: 5%;
+        padding-top: 5%;
+        padding-bottom: 8%;
+    }
+    #preferences-header {
+        background-color: #7B7366;
+        color: #E8CA72;
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+        font-family: "Ranger";
+        font-size: 28;
+    }
+    #preferences {
+        margin-left: 5%;
+        /* margin-top: 5%; */
+        text-align: left;
+    }
+    #preferences > div {
+        vertical-align: middle;
+    }
+    .preference-name {
+        color: #7C766A;
+        font-family: "Pacifico";
+        position: relative;
+        bottom: -14px;
+        font-size: 14;
+    }
+    #sign-out-button {
+        display: block;
+        width: 50%;
+        height: 50px;
+        margin: 5% auto 50px auto;
+        border-radius: 15px;
+        background-color: #E8CA72;
+        color: #DE6E5E;
+        font-family: "Ranger";
+        font-size: 32;
+    }
 
-/* Settings Page */
-#settings-body {
-    text-align: center;
-    height: 100%;
-    background-color: #DE6E5E;
-    font-family: "Ranger";
-}
-#settings-title {
-    margin: 20% 0 0 0;
-    color: #E8CA72;
-    font-size: 40;
-}
-#settings-body > #bottom-navbar {
-    background-color: #92AE94;
-}
-#profile-block {
-    background-color: #E7D69D;
-    width: 100%;
-    height: 20%;
-    margin-top: 5%;
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 24px;
+    }
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #92AE94;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 24px;
+    }
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: 2px;
+        bottom: 2px;
+        background-color: #E8CA72;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 50%;
+    }
+    input:checked + .slider {
+        background-color: #92AE94;
+    }
+    input:focus + .slider {
+        box-shadow: 0 0 1px #92AE94;
+    }
+    input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+
+
+    /* Geography Pages */
+    #geography-body {
+        text-align: center;
+        height: 100%;
+        background-color: #E7D69D;
+        font-family: "Ranger";
+    }
+    #geography-body > img {
+        width: 50%;
+        margin: 30% 0 10% 0;
+    }
+    #geography-body > h2 {
+        font-size: 40;
+        color: #827B6C;
+    }
+    #category-footer {
+        position: absolute;
+        bottom: -10;
+        left: 0;
+        width: 100%;
+    }
+
+    /* Art Pages */
+    #art-body {
+        text-align: center;
+        height: 100%;
+        background-color: #92AE94;
+        font-family: "Ranger";
+    }
+    #art-body > img {
+        width: 30%;
+        margin: 30% 0 10% 0;
+    }
+    #art-body > h2 {
+        font-size: 40;
+        color: #E7D69D;
+        border-color: #E8CA72;
+    }
+
+    /* Entertainment Pages */
+    #entertainment-body {
+        text-align: center;
+        height: 100%;
+        background-color: #DE6E5E;
+        font-family: "Ranger";
+    }
+    #entertainment-body > img {
+        width: 50%;
+        margin: 30% 0 10% 0;
+    }
+    #entertainment-body > h2 {
+        font-size: 40;
+        color: #E7D69D;
+        border-color: #E8CA72;
+    }
+
+    /* Sports Pages */
+    #sports-body {
+        text-align: center;
+        height: 100%;
+        background-color: #E4C670;
+        font-family: "Ranger";
+    }
+    #sports-body > img {
+        width: 50%;
+        margin: 30% 0 10% 0;
+    }
+    #sports-body > h2 {
+        font-size: 40;
+        color: #DE6E5E;
+        border-color: #DE6E5E;
+    }
+
+    /* BF List Page */
+    #bf-list-body {
+        text-align: center;
+        height: 100%;
+        background-color: #90B29A;
+        font-family: "Ranger";
+    }
+    #bf-list-body > #back-button {
+        right: 35%;
+    }
+    #bf-list-stripes {
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        top: 0;
+        width: 30%;
+        height: 100%;
+    }
+    .bf-list-stripe {
+        display: inline-block;
+        width: 25%;
+        height: 100%;
+    }
+    #bf-list-stripe1 {
+        margin-right: 4%;
+        background-color: #EADBA0;
+    }
+    #bf-list-stripe2 {
+        margin-right: 4%;
+        background-color: #E8CA72;
+    }
+    #bf-list-stripe3 {
+        float: right;
+        background-color: #E78271;
+    }
+    #your-best-friends {
+        width: 30%;
+        color: #EADBA0;
+        margin: 25% 35% 0 auto;
+        text-align: right;
+        font-family: "Ranger";
+        font-size: 25;
+    }
+    #best-friends-list {
+        margin-left: 20%;
+    }
+    #best-friends-list > div {
+        height: 50px;
+        border-bottom-left-radius: 25px;
+        border-top-left-radius: 25px;
+        text-align: left;
+        padding-left: 10%;
+    }
+    #best-friends-list > div > button {
+        font-size: 20;
+        font-family: "Pacifico";
+        color: white;
+        line-height: 50px;
+    }
+    #best-friends-list-1 {
+        background-color: #E78271;
+    }
+    #best-friends-list-2 {
+        background-color: #E8CA72;
+        margin: 10% 15% 10% 0 !important;
+    }
+    #best-friends-list-3 {
+        background-color: #EADBA0;
+        margin: 10% 30% 10% 0 !important;
+    }
+    #search-for-friends {
+        color: white;
+        height: 100px;
+        border-bottom-left-radius: 50px;
+        border-top-left-radius: 50px;
+        font-size: 26;
+        font-family: "Pacifico";
+        text-align: right;
+        margin: 0 28.5% 0 20%;
+        background-color: #7C766A;
+        padding-right: 5%;
+    }
+
+    /* Spin Page */
+    #spin-body {
+        text-align: center;
+        height: 100%;
+        background-color: #90B29A;
+        font-family: "Ranger";
+    }
+    #spin-names {
+        width: 90%;
+        height: 50px;
+        margin: 30% auto 0 auto;
+    }
+    .spin-name {
+        padding: 0;
+        line-height: 50px;
+        display: inline-block;
+        width: 45%;
+        color: #E16C5D;
+        background-color: white;
+        border-radius: 25px;
+        font-family: "Pacifico";
+    }
+    #spin-name-1 {
+        box-shadow: 5px 5px 0 0px #E8CA72;
+        margin-right: 5%;
+    }
+    #spin-name-2 {
+        box-shadow: -5px 5px 0 0px #E8CA72;
+    }
+    #spin-groups {
+        width: 90%;
+        height: 50px;
+        margin: 10% auto 0 auto;
+    }
+    .spin-group {
+        padding: 0;
+        display: inline-block;
+        width: 45%;
+    }
+    #spin-wheel {
+        width: 80vw;
+        height: 80vw;
+        margin: 10% auto 0 auto;
+        /* height: 50px; */
+        /* padding-top: 100%; */
+        /* font-size: 0; */
+    }
+    #spin-wheel > img {
+        -webkit-transition: -webkit-transform 2s ease-out;
+    }
+
+    /* Question Page */
+    #question-body {
+        background-color: #EADBA0;
+    }
+    #question {
+        margin: 20% auto 10% auto;
+        width: 80%;
+        padding: 15% 0;
+        font-size: 28;
+        text-align: center;
+        background-color: white;
+        color: #7C766A;
+        font-family: "Ranger";
+        border-radius: 25px;
+        box-shadow: 10px 10px 0 0px #E8CA72;
+    }
+    .answer {
+        display: block;
+        font-family: "Pacifico";
+        background-color: white;
+        color: #E16C5D;
+        width: 80%;
+        height: 50px;
+        line-height: 50px;
+        box-shadow: -10px 10px 0 0px #E8CA72;
+        border-radius: 25px;
+        margin: 5% auto;
+        text-align: center;
+    }
+    #question-stripes {
+        margin: 10% auto 0 auto;
+        width: 35%;
+        height: 100%;
+    }
+    .question-stripe {
+        display: inline-block;
+        width: 15px;
+        height: 100%;
+    }
+    #question-stripe2, #question-stripe3, #question-stripe4, #question-stripe5 {
+        margin: 0 1%;
+    }
+    #question-stripe1 {
+        margin-right: 1%;
+    }
+    .geography-stripes > #question-stripe1 { background-color: #90B29A; }
+    .art-stripes > #question-stripe1 { background-color: #EADBA0; }
+    .entertainment-stripes > #question-stripe1 { background-color: #EADBA0; }
+    .sports-stripes > #question-stripe1 { background-color: #7C766A; }
+
+    .sports-stripes > #question-stripe2 { background-color: #94B096; }
+    .sports-stripes > #question-stripe5 { background-color: #94B096; }
     
-    padding-top: 5%;
-}
-#profile-header {
-    background-color: #92AE94;
-    height: 40px;
-    line-height: 40px;
-    width: 100%;
-    font-family: "Ranger";
-    font-size: 28;
-}
+    .entertainment-stripes > #question-stripe3 { background-color: #94B096; }
+    .entertainment-stripes > #question-stripe6 { background-color: #94B096; }
 
 
-/* Geography Pages */
-#category-body {
-    text-align: center;
-    height: 100%;
-    background-color: #E7D69D;
-    font-family: "Ranger";
-}
-#category-body > img {
-    width: 50%;
-    margin: 30% 0 10% 0;
-}
-#category-body > h2 {
-    font-size: 40;
-    color: #827B6C;
-}
-#category-footer {
-    position: absolute;
-    bottom: -10;
-    left: 0;
-    width: 100%;
+    #question-stripe2 {
+        background-color: #E8CA72;
+    }
+    #question-stripe3 {
+        background-color: #E78271;
+    }
+    #question-stripe4 {
+        background-color: #7C766A;
+    }
+    #question-stripe5 {
+        background-color: #E8CA72;
+    }
+    #question-stripe6 {
+        margin-left: 1%;
+        background-color: #E78271;
+    }
+
+    /* Correct/Incorrect Page */
+
+    #correct-incorrect-body {
+        background-color: #EADBA0;
+    }
+    #correct-incorrect-subtext {
+        color: #E78271;
+        font-family: "Pacifico";
+        font-size: 20;
+        text-align: center;
+    }
+    #correct-incorrect {
+        color: #90B29A;
+        font-family: "Ranger";
+        font-size: 48;
+        text-align: center;
+    }
+    #top-stripes {
+        margin: 0 auto 2% auto;
+        width: 35%;
+        height: 40%;
+    }
+    #bottom-stripes {
+        margin: 2% auto 0 auto;
+        width: 35%;
+        height: 100%;
+        overflow-y:hidden;
+    }
+    .answer-stripe {
+        display: inline-block;
+        width: 15px;
+        height: 100%;
+    }
+    #answer-stripe2, #answer-stripe3, #answer-stripe4, #answer-stripe5 {
+        margin: 0 1%;
+    }
+
+    .geography-stripes > #answer-stripe1 { background-color: #90B29A; }
+    .art-stripes > #answer-stripe1 { background-color: #EADBA0; }
+    .entertainment-stripes > #answer-stripe1 { background-color: #EADBA0; }
+    .sports-stripes > #answer-stripe1 { background-color: #7C766A; }
+
+    .sports-stripes > #answer-stripe2 { background-color: #94B096; }
+    .sports-stripes > #answer-stripe5 { background-color: #94B096; }
+    
+    .entertainment-stripes > #answer-stripe3 { background-color: #94B096; }
+    .entertainment-stripes > #answer-stripe6 { background-color: #94B096; }
+
+
+    #answer-stripe1 {
+        margin-right: 1%;
+        background-color: #90B29A;
+    }
+    #answer-stripe2 {
+        background-color: #E8CA72;
+    }
+    #answer-stripe3 {
+        background-color: #E78271;
+    }
+    #answer-stripe4 {
+        background-color: #7C766A;
+    }
+    #answer-stripe5 {
+        background-color: #E8CA72;
+    }
+    #answer-stripe6 {
+        margin-left: 1%;
+        background-color: #E78271;
+    }
 }
 
-/* Art Pages */
-#category-body {
-    text-align: center;
-    height: 100%;
-    background-color: #92AE94;
-    font-family: "Ranger";
-}
-#category-body > img {
-    width: 30%;
-    margin: 30% 0 10% 0;
-}
-#category-body > h2 {
-    font-size: 40;
-    color: #E7D69D;
-    border-color: #E8CA72;
-}
-#category-footer {
-    position: absolute;
-    bottom: -10;
-    left: 0;
-    width: 100%;
+@media screen and (min-width: 767px) {
+    html {
+        visibility: hidden;
+    }
+    html:after{
+        content:'The size of the device is not supported. Please use a smaller device'; 
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        font-size: 10vh;
+        text-align: center;
+        color: black;
+    }
 }
 
-/* Entertainment Pages */
-#category-body {
-    text-align: center;
-    height: 100%;
-    background-color: #DE6E5E;
-    font-family: "Ranger";
-}
-#category-body > img {
-    width: 50%;
-    margin: 30% 0 10% 0;
-}
-#category-body > h2 {
-    font-size: 40;
-    color: #E7D69D;
-    border-color: #E8CA72;
-}
-#category-footer {
-    position: absolute;
-    bottom: -10;
-    left: 0;
-    width: 100%;
-}
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    #correct-incorrect-body, #correct-incorrect-html, #win-body, #win-html, #lose-body, #lose-html {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    button {
+        background: transparent;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    button:focus {
+        outline: none;
+    }
+    @font-face {
+        font-family: "Pacifico";
+        src: url('Resources/Fonts/Pacifico/Pacifico-Regular.ttf');
+    }
+    @font-face {
+        font-family: "Ranger";
+        src: url('Resources/Fonts/Ranger_Personal_License/Ranger_Regular.ttf');
+    }
+    /* The texture over the whole page */
+    html:before {
+        content: '';
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-image: url('Resources/TEXTURE.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        pointer-events: none;
+    }
+    #open-html:before {
+        all: unset;
+    }
+    #bottom-navbar {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 8%;
+        background-color: #E78271;
+        text-align: center;
+    }
+    #bottom-navbar > button{
+        margin-top: 1%;
+        height: 90%;
+    }
+    #bottom-navbar img {
+        height: 100%;
+    }
 
-/* Sports Pages */
-#category-body {
-    text-align: center;
-    height: 100%;
-    background-color: #E4C670;
-    font-family: "Ranger";
-}
-#category-body > img {
-    width: 50%;
-    margin: 30% 0 10% 0;
-}
-#category-body > h2 {
-    font-size: 40;
-    color: #E7D69D;
-    border-color: #DE6E5E;
-}
-#category-footer {
-    position: absolute;
-    bottom: -10;
-    left: 0;
-    width: 100%;
-}
+    /* Open Page */
+    #open-body {
+        text-align: center;
+        background-color: #90B29A;
+        background-image: url('Resources/Recurso\ 5.png'), url('Resources/Elements.png'), url('Resources/TEXTURE.png');
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-size: 80%, cover, cover;
+        background-position-y: 50px, 0px, 0px;
+        background-position-x: center, center, center;
+    }
+    #loading-bar {
+        position: absolute;
+        bottom: 5%;
+        left: 25%;
+        height: 16px;
+        width: 50%;
+        border: 1px solid black;
+        border-radius: 8px;
+        background-color: white;
+    }
+    #loading-bar > div {
+        background-color: #E6C974;
+        border-radius: 5px;
+        margin: 3px;
+        height: 10px;
+        width: 70%;
+    }
+    #back-button {
+        position: absolute;
+        top: 4%;
+        right: 4%;
+    }
+    #back-button > img {
+        width: 80%;
+    }
 
- /* BF List Page */
-#bf-list-body {
-    text-align: center;
-    height: 100%;
-    background-color: #90B29A;
-    font-family: "Ranger";
-}
-#bf-list-body > #back-button {
-    right: 35%;
-}
-#bf-list-stripes {
-    position: absolute;
-    z-index: -1;
-    right: 0;
-    top: 0;
-    width: 30%;
-    height: 100%;
-}
-.bf-list-stripe {
-    display: inline-block;
-    width: 25%;
-    height: 100%;
-}
-#bf-list-stripe1 {
-    margin-right: 4%;
-    background-color: #EADBA0;
-}
-#bf-list-stripe2 {
-    margin-right: 4%;
-    background-color: #E8CA72;
-}
-#bf-list-stripe3 {
-    float: right;
-    background-color: #E78271;
-}
-#your-best-friends {
-    width: 30%;
-    color: #EADBA0;
-    margin: 30% 35% 0 auto;
-    text-align: right;
-    font-family: "Ranger";
-    font-size: 25;
-}
-#best-friends-list {
-    margin-left: 20%;
-}
-#best-friends-list > div {
-    height: 50px;
-    border-bottom-left-radius: 25px;
-    border-top-left-radius: 25px;
-    text-align: left;
-    padding-left: 10%;
-}
-#best-friends-list > div > button {
-    font-size: 20;
-    font-family: "Pacifico";
-    color: white;
-    line-height: 50px;
-}
-#best-friends-list-1 {
-    background-color: #E78271;
-}
-#best-friends-list-2 {
-    background-color: #E8CA72;
-    margin: 10% 15% 10% 0 !important;
-}
-#best-friends-list-3 {
-    background-color: #EADBA0;
-    margin: 10% 30% 10% 0 !important;
-}
-#search-for-friends {
-    color: white;
-    height: 100px;
-    border-bottom-left-radius: 50px;
-    border-top-left-radius: 50px;
-    font-size: 26;
-    font-family: "Pacifico";
-    text-align: right;
-    margin: 0 28.5% 0 20%;
-    background-color: #7C766A;
-    padding-right: 5%;
-}
+    /* Profile Page */
+    #profile-body {
+        text-align: center;
+        background-color: #E7DEAD;
+    }
+    #profile-pic {
+        margin-top: 5%;
+        height: 25%;
+    }
+    #profile-name {
+        color: #908A7D;
+        font-family: "Ranger";
+        margin-bottom: 0;
+    }
+    #profile-handle {
+        color: #E78271;
+        font-family: "Pacifico";
+        font-size: 80%;
+        margin-top: 0;
+    }
+    #button-menu {
+        margin-top: 2%;
+        height: 50%;
+    }
+    #button-menu > button {
+        display: block;
+        width: 100%;
+        background-color: #E7D488;
+        margin: 1% 0;
+        padding: 3% 0;
+        color: #7E7767;
+        font-family: "Pacifico";
+    }
 
-/* Spin Page */
-#spin-body {
-    text-align: center;
-    height: 100%;
-    background-color: #90B29A;
-    font-family: "Ranger";
-}
-#spin-names {
-    width: 90%;
-    height: 50px;
-    margin: 30% auto 0 auto;
-}
-.spin-name {
-    padding: 0;
-    line-height: 50px;
-    display: inline-block;
-    width: 45%;
-    color: #E16C5D;
-    background-color: white;
-    border-radius: 25px;
-    font-family: "Pacifico";
-}
-#spin-name-1 {
-    box-shadow: 5px 5px 0 0px #E8CA72;
-    margin-right: 5%;
-}
-#spin-name-2 {
-    box-shadow: -5px 5px 0 0px #E8CA72;
-}
-#spin-groups {
-    width: 90%;
-    height: 50px;
-    margin: 10% auto 0 auto;
-}
-.spin-group {
-    padding: 0;
-    display: inline-block;
-    width: 45%;
-}
+    /* Login Page */
+    #login-body {
+        text-align: center;
+        background-color: #EADBA0;
+    }
+    #login-title {
+        margin: 5% 0 10% 0;
+        color: #E16C5D;
+        font-family: "Ranger";
+        font-size: 400%;
+    }
+    #login-form {
+        width: 100%;
+    }
+    #login-form > div {
+        display: inline-block;
+        background-color: white;
+        width: 30%;
+        padding: 3%;
+        border-radius: 30px;
+    }
+    #login-form label {
+        color: #E16C5D;
+        font-family: "Ranger";
+    }
+    #login-form input[type=password], input[type=text] {
+        width: 80%;
+        border: 0;
+        border-bottom: 1px solid #7C766A;
+        background-color: transparent;
+        margin-top: 5%;
+    }
+    #login-form input:focus {
+        outline: none;
+    }
+    #username-div {
+        margin-right: 10%;
+        box-shadow: 10px 10px 0 0px #E8CA72;
+    }
+    #password-div {
+        box-shadow: -10px 10px 0 0px #E8CA72;
+    }
+    #login-form input[type=submit] {
+        width: 50px;
+        height: 50px;
+        background-color: #90B29A;
+        font-family: "Ranger";
+        border: 0;
+        border-radius: 25px;
+        color: white;
+    }
+    #login-body > p {
+        display: inline-block;
+        font-family: "Pacifico";
+        color: #7C766A;
+        margin-right: 10%;
+    }
+    #login-body > button {
+        display: inline-block;
+        background-color: white;
+        font-family: "Ranger";
+        color: #90B29A;
+        height: 30px;
+        width: 40%;
+        border-radius: 15px;
+    }
+    #login-bottom-stripes {
+        visibility: hidden;
+    }
+    /* Menu Page */
+    #menu-body {
+        text-align: center;
+        background-color: #90B29A;
+    }
+    #menu-body > button {
+        height: 20%;
+        background-color: #E7DEAD;
+        padding: 0 5%;
+        font-family: "Ranger";
+        color: #908A7D;
+        font-size: 25;
+        border-radius: 20px;
+    }
+    #play-now-button {
+        display: block;
+        margin: 0 auto 5% auto;
+        margin-top: 10% !important;
+        font-size: 40 !important;
+        color: #90B29A !important;
+        height: 30% !important;
+        box-shadow:0px 0px 0px 10px #E8CA72 inset;
+    }
 
-/* Question Page */
-#question-body {
-    background-color: #EADBA0;
-}
-#question {
-    margin: 20% auto 10% auto;
-    width: 80%;
-    padding: 15% 0;
-    font-size: 28;
-    text-align: center;
-    background-color: white;
-    color: #7C766A;
-    font-family: "Ranger";
-    border-radius: 25px;
-    box-shadow: 10px 10px 0 0px #E8CA72;
-}
-.answer {
-    font-family: "Pacifico";
-    background-color: white;
-    color: #E16C5D;
-    width: 80%;
-    height: 50px;
-    line-height: 50px;
-    box-shadow: -10px 10px 0 0px #E8CA72;
-    border-radius: 25px;
-    margin: 5% auto;
-    text-align: center;
-}
+    /* Play Now Page */
+    #play-now-body {
+        text-align: center;
+        background-color: #EADBA0;
+    }
+    #search, #random{
+        display: block;
+        width: 85%;
+        border-radius: 30px;
+        font-family: "Ranger";
+        font-size: 25;
+    }
+    #search {
+        background-color: #90B29A;
+        box-shadow: 10px 10px 0 0px white;
+        margin: 5% 0 10% 0;
+    }
+    #random {
+        background-color: #E8CA72;
+        box-shadow: -10px 10px 0 0px white;
+        margin-left: 15%;
+    }
+    #left-wall, #right-wall {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        width: 4%;
+        height: 100%;
+    }
+    #left-wall {
+        left: 0;
+        background-color: #90B29A;
+    }
+    #right-wall {
+        right: 0;
+        background-color: #E8CA72;
+    }
 
-/* Correct Page */
+    /* BF Results Page */
+    #bf-results-body {
+        text-align: center;
+        height: 100%;
+        background-color: #90B29A;
+    }
+    #results {
+        width: 60%;
+        color: #EADBA0;
+        margin: 5% auto 0 auto;
+        text-align: left;
+        font-family: "Ranger";
+    }
+    #bf {
+        font-size: 30;
+        margin: 0;
+    }
+    #latest {
+        font-size: 35;
+        margin: 0;
+    }
+    #bf-top-stripes, #bf-bottom-stripes {
+        visibility: hidden;
+    }
+    #latest-friends-list > div {
+        clear: both;
+        display: inline-block;
+        width: 60%;
+        padding: 0 20%;
+        font-family: "Pacifico";
+        margin: 2% 0;
+    }
+    #latest-friends-list-yulita {
+        background-color: #EADBA0;
+    }
+    #latest-friends-list-yulita > .latest-friends-list-name {
+        color: #E16C5D;
+    }
+    #latest-friends-list-ana {
+        background-color: #E78271;
+    }
+    #latest-friends-list-ana > .latest-friends-list-name {
+        color: #EADBA0;
+    }
+    #latest-friends-list-marina {
+        background-color: #7C766A;
+    }
+    #latest-friends-list-marina > .latest-friends-list-name {
+        color: #E8CA72;
+    }
+    .latest-friends-list-points {
+        color: white;
+        font-size: 35;
+        float: right;
+    }
+    .latest-friends-list-name {
+        font-size: 30;
+        float: left;
+    }
 
-#correct-incorrect-body {
-    background-color: #EADBA0;
-}
-#correct-incorrect-subtext {
-    color: #E78271;
-    font-family: "Pacifico";
-    font-size: 20;
-    text-align: center;
-}
-#correct-incorrect {
-    color: #90B29A;
-    font-family: "Ranger";
-    font-size: 48;
-    text-align: center;
-}
-#top-stripes {
-    margin: 0 auto 2% auto;
-    width: 35%;
-    height: 40%;
-}
-#bottom-stripes {
-    margin: 2% auto 0 auto;
-    width: 35%;
-    height: 100%;
-    overflow-y:hidden;
-    /* display: inline-block; */
-}
-.answer-stripe {
-    display: inline-block;
-    width: 15px;
-    height: 100%;
-}
-#answer-stripe2, #answer-stripe3, #answer-stripe4, #answer-stripe5 {
-    margin: 0 1%;
-}
-#answer-stripe1 {
-    margin-right: 1%;
-    background-color: #90B29A;
-}
-#answer-stripe2 {
-    background-color: #E8CA72;
-}
-#answer-stripe3 {
-    background-color: #E78271;
-}
-#answer-stripe4 {
-    background-color: #7C766A;
-}
-#answer-stripe5 {
-    background-color: #E8CA72;
-}
-#answer-stripe6 {
-    margin-left: 1%;
-    background-color: #E78271;
+    /* Results Page */
+    #results-body {
+        text-align: center;
+        height: 100%;
+        background-color: #90B29A;
+        font-family: "Ranger";
+    }
+    #results-body > h3 {
+        font-size: 30;
+        margin: 10% 0 0 0;
+        color: #FBF8F4;
+    }
+    #results-body p {
+        margin: 0;
+    }
+    .results-result-outcome {
+        width: 60%;
+        height: 50px;
+        margin: 6% auto 4% auto;
+        border-radius: 25px;
+        line-height: 50px;
+        font-size: 20;
+    }
+    .results-result-name {
+        width: 100%;
+        background-color: white;
+        font-family: "Pacifico";
+        font-size: 15;
+    }
+    #results-body > div:nth-of-type(1) > .results-result-outcome {
+        background-color: #E8CA72;
+        color: #E16C5D;
+    }
+    #results-body > div:nth-of-type(2) > .results-result-outcome {
+        background-color: #E8CA72;
+        color: #7C766A;
+    }
+    #results-body > div:nth-of-type(3) > .results-result-outcome {
+        background-color: #EADBA0;
+        color: #E16C5D;
+    }
+    #results-body > div:nth-of-type(4) > .results-result-outcome {
+        background-color: #E16C5D;
+        color: #EADBA0;
+    }
+
+    /* Win Page */
+    #win-body {
+        text-align: center;
+        height: 100%;
+        background-color: #90B29A;
+        font-family: "Ranger";
+    }
+    #you-win {
+        width: 80%;
+        height: 100px;
+        margin: 10% auto 0 auto;
+        background-color: #E8CA72;
+        color: #E16C5D;
+        box-shadow: 10px 10px 0 0px #EADBA0;
+        border-radius: 50px;
+        line-height: 100px;
+        font-size: 40;
+    }
+    #win-bottom-stripes {
+        margin: 10% auto 0 auto;
+        width: 70%;
+        height: 100%;
+    }
+    .win-bottom-stripe {
+        display: inline-block;
+        width: 10%;
+        height: 100%;
+    }
+    #win-stripe2, #win-stripe3, #win-stripe4, #win-stripe5 {
+        margin: 0 1%;
+    }
+    #win-stripe1 {
+        margin-right: 1%;
+        background-color: #EADBA0;
+    }
+    #win-stripe2 {
+        background-color: #E8CA72;
+    }
+    #win-stripe3 {
+        background-color: #E78271;
+    }
+    #win-stripe4 {
+        background-color: #7C766A;
+    }
+    #win-stripe5 {
+        background-color: #E8CA72;
+    }
+    #win-stripe6 {
+        margin-left: 1%;
+        background-color: #E78271;
+    }
+
+    /* Lose Page */
+    #lose-body {
+        text-align: center;
+        height: 100%;
+        background-color: #7C766A;
+        font-family: "Ranger";
+    }
+    #you-lose {
+        width: 80%;
+        height: 100px;
+        margin: 10% auto 1% auto;
+        background-color: #E8CA72;
+        color: #E16C5D;
+        box-shadow: 10px 10px 0 0px #90B29A;
+        border-radius: 50px;
+        line-height: 100px;
+        font-size: 40;
+    }
+    #lose-middle-stripes, #lose-bottom-stripes {
+        margin: 2% auto 2% auto;
+        width: 70%;
+    }
+    #lose-middle-stripes {
+        height: 10%;
+    }
+    #lose-bottom-stripes {
+        height: 100%;
+    }
+    .lose-middle-stripe, .lose-bottom-stripe {
+        display: inline-block;
+        width: 10%;
+        height: 100%;
+    }
+    #lose-stripe2, #lose-stripe3, #lose-stripe4, #lose-stripe5 {
+        margin: 0 1%;
+    }
+    #lose-stripe1 {
+        margin-right: 1%;
+        background-color: #EADBA0;
+    }
+    #lose-stripe2 {
+        background-color: #E8CA72;
+    }
+    #lose-stripe3 {
+        background-color: #E78271;
+    }
+    #lose-stripe4 {
+        background-color: #90B29A;
+    }
+    #lose-stripe5 {
+        background-color: #E8CA72;
+    }
+    #lose-stripe6 {
+        margin-left: 1%;
+        background-color: #E78271;
+    }
+    #maybe-next-time {
+        width: 100%;
+        height: 10vh;
+        color: white;
+        font-family: "Pacifico";
+        background-color: #90B29A;
+        line-height: 10vh;
+    }
+
+    /* Settings Page */
+    #settings-body {
+        text-align: center;
+        height: 100%;
+        background-color: #DE6E5E;
+        font-family: "Ranger";
+    }
+    #settings-title {
+        margin: 5% 0 0 0;
+        color: #E8CA72;
+        font-size: 40;
+    }
+    #settings-body > #bottom-navbar {
+        background-color: #92AE94;
+    }
+    #profile-block {
+        text-align: left;
+        background-color: #E7D69D;
+        width: 100%;
+        margin-top: 1%;
+        padding-top: 1%;
+        height: 30%;
+        /* padding-bottom: 8%; */
+    }
+    #settings-pic {
+        margin-left: 5%;
+        margin-right: 2%;
+        float: left;
+        height: 95%;
+    }
+    #profile-header {
+        background-color: #92AE94;
+        color: #7B7366;
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+        font-family: "Ranger";
+        font-size: 28;
+    }
+    #profile-social {
+        font-family: "Recurso";
+        margin: 1% 0 0 5%;
+        color: #92AE95;
+        font-size: 14;
+        /* line-height: 1.6; */
+    }
+    #button-pic {
+        margin-top: -10px;
+        margin-right: 8%;
+        float: right;
+        -webkit-transform: rotate(180deg);
+        width: 20px;
+    }
+    #preferences-block {
+        background-color: #E7D69D;
+        width: 100%;
+        margin-top: 2%;
+        padding-top: 1%;
+        padding-bottom: 2%;
+    }
+    #preferences-header {
+        background-color: #7B7366;
+        color: #E8CA72;
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+        font-family: "Ranger";
+        font-size: 28;
+    }
+    #preferences {
+        margin-left: 5%;
+        /* margin-top: 5%; */
+        text-align: left;
+    }
+    #preferences > div {
+        vertical-align: middle;
+    }
+    #preferences > div:nth-child(1){
+        display: inline-block;
+    }
+    #preferences > div:nth-child(2){
+        margin-left: 10%;
+        display: inline-block;
+    }
+    .preference-name {
+        color: #7C766A;
+        font-family: "Pacifico";
+        position: relative;
+        bottom: -14px;
+        font-size: 14;
+    }
+    #sign-out-button {
+        display: block;
+        width: 30%;
+        height: 50px;
+        margin: 1% auto 50px auto;
+        border-radius: 15px;
+        background-color: #E8CA72;
+        color: #DE6E5E;
+        font-family: "Ranger";
+        font-size: 32;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 24px;
+    }
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #92AE94;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 24px;
+    }
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: 2px;
+        bottom: 2px;
+        background-color: #E8CA72;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 50%;
+    }
+    input:checked + .slider {
+        background-color: #92AE94;
+    }
+    input:focus + .slider {
+        box-shadow: 0 0 1px #92AE94;
+    }
+    input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+
+
+    /* Geography Pages */
+    #geography-body {
+        text-align: center;
+        height: 100%;
+        background-color: #E7D69D;
+        font-family: "Ranger";
+    }
+    #geography-body > img {
+        height: 50%;
+        margin: 0;
+    }
+    #geography-body > h2 {
+        font-size: 40;
+        color: #827B6C;
+    }
+    #category-footer {
+        position: absolute;
+        bottom: -10;
+        left: 0;
+        width: 100%;
+    }
+
+    /* Art Pages */
+    #art-body {
+        text-align: center;
+        height: 100%;
+        background-color: #92AE94;
+        font-family: "Ranger";
+    }
+    #art-body > img {
+        height: 50%;
+        margin: 0;
+    }
+    #art-body > h2 {
+        font-size: 40;
+        color: #E7D69D;
+        border-color: #E8CA72;
+    }
+
+    /* Entertainment Pages */
+    #entertainment-body {
+        text-align: center;
+        height: 100%;
+        background-color: #DE6E5E;
+        font-family: "Ranger";
+    }
+    #entertainment-body > img {
+        height: 50%;
+        margin: 0;
+    }
+    #entertainment-body > h2 {
+        font-size: 40;
+        color: #E7D69D;
+        border-color: #E8CA72;
+    }
+
+    /* Sports Pages */
+    #sports-body {
+        text-align: center;
+        height: 100%;
+        background-color: #E4C670;
+        font-family: "Ranger";
+    }
+    #sports-body > img {
+        height: 50%;
+        margin: 0;
+    }
+    #sports-body > h2 {
+        font-size: 40;
+        color: #DE6E5E;
+        border-color: #DE6E5E;
+    }
+
+    /* BF List Page */
+    #bf-list-body {
+        text-align: center;
+        height: 100%;
+        background-color: #90B29A;
+        font-family: "Ranger";
+    }
+    #bf-list-body > #back-button {
+        right: 4%;
+    }
+    #bf-list-stripes {
+        visibility: hidden;
+    }
+    #your-best-friends {
+        width: 30%;
+        color: #EADBA0;
+        margin: 5% 35% 0 auto;
+        text-align: right;
+        font-family: "Ranger";
+        font-size: 25;
+    }
+    #best-friends-list {
+        margin-left: 20%;
+    }
+    #best-friends-list > div {
+        height: 50px;
+        border-bottom-left-radius: 25px;
+        border-top-left-radius: 25px;
+        text-align: left;
+        padding-left: 10vw;
+    }
+    #best-friends-list > div > button {
+        font-size: 20;
+        font-family: "Pacifico";
+        color: white;
+        line-height: 50px;
+    }
+    #best-friends-list-1 {
+        background-color: #E78271;
+    }
+    #best-friends-list-2 {
+        background-color: #E8CA72;
+        margin: 2% 0 2% 0 !important;
+    }
+    #best-friends-list-3 {
+        background-color: #EADBA0;
+        margin: 2% 0 2% 0 !important;
+    }
+    #search-for-friends {
+        color: white;
+        border-bottom-left-radius: 50px;
+        border-top-left-radius: 50px;
+        font-size: 26;
+        font-family: "Pacifico";
+        padding-left: 10vw;
+        text-align: left;
+        margin: 0 0 0 20%;
+        background-color: #7C766A;
+    }
+
+    /* Spin Page */
+    #spin-body {
+        text-align: center;
+        height: 100%;
+        background-color: #90B29A;
+        font-family: "Ranger";
+    }
+    #spin-names {
+        width: 80%;
+        height: 50px;
+        margin: 5% auto 0 auto;
+    }
+    .spin-name {
+        padding: 0;
+        line-height: 50px;
+        display: inline-block;
+        width: 45%;
+        color: #E16C5D;
+        background-color: white;
+        border-radius: 25px;
+        font-family: "Pacifico";
+    }
+    #spin-name-1 {
+        box-shadow: 5px 5px 0 0px #E8CA72;
+        margin-right: 5%;
+    }
+    #spin-name-2 {
+        box-shadow: -5px 5px 0 0px #E8CA72;
+    }
+    #spin-groups {
+        width: 90%;
+        height: 50px;
+        margin: 2% auto 0 auto;
+    }
+    .spin-group {
+        padding: 0;
+        display: inline-block;
+        width: 45%;
+    }
+    #spin-wheel {
+        width: 80vw;
+        margin: 0 auto 10vh auto;
+    }
+    #spin-wheel > img {
+        -webkit-transition: -webkit-transform 2s ease-out;
+    }
+
+    /* Question Page */
+    #question-body {
+        background-color: #EADBA0;
+    }
+    #question {
+        margin: 5% auto 3% auto;
+        width: 80%;
+        padding: 5% 0;
+        font-size: 28;
+        text-align: center;
+        background-color: white;
+        color: #7C766A;
+        font-family: "Ranger";
+        border-radius: 25px;
+        box-shadow: 10px 10px 0 0px #E8CA72;
+    }
+    .answer {
+        display: block;
+        font-family: "Pacifico";
+        background-color: white;
+        color: #E16C5D;
+        width: 80%;
+        height: 50px;
+        line-height: 50px;
+        box-shadow: -10px 10px 0 0px #E8CA72;
+        border-radius: 25px;
+        margin: 2% auto;
+        text-align: center;
+    }
+    #question-stripes {
+        visibility: hidden;
+    }
+
+    /* Correct/Incorrect Page */
+
+    #correct-incorrect-body {
+        background-color: #EADBA0;
+    }
+    #correct-incorrect-subtext {
+        color: #E78271;
+        font-family: "Pacifico";
+        font-size: 20;
+        text-align: center;
+    }
+    #correct-incorrect {
+        color: #90B29A;
+        font-family: "Ranger";
+        font-size: 48;
+        text-align: center;
+    }
+    #top-stripes {
+        margin: 0 auto 2% auto;
+        width: 35%;
+        height: 40%;
+    }
+    #bottom-stripes {
+        margin: 2% auto 0 auto;
+        width: 35%;
+        height: 100%;
+        overflow-y:hidden;
+    }
+    .answer-stripe {
+        display: inline-block;
+        width: 13%;
+        height: 100%;
+    }
+    #answer-stripe2, #answer-stripe3, #answer-stripe4, #answer-stripe5 {
+        margin: 0 1%;
+    }
+
+    .geography-stripes > #answer-stripe1 { background-color: #90B29A; }
+    .art-stripes > #answer-stripe1 { background-color: #EADBA0; }
+    .entertainment-stripes > #answer-stripe1 { background-color: #EADBA0; }
+    .sports-stripes > #answer-stripe1 { background-color: #7C766A; }
+
+    .sports-stripes > #answer-stripe2 { background-color: #94B096; }
+    .sports-stripes > #answer-stripe5 { background-color: #94B096; }
+    
+    .entertainment-stripes > #answer-stripe3 { background-color: #94B096; }
+    .entertainment-stripes > #answer-stripe6 { background-color: #94B096; }
+
+
+    #answer-stripe1 {
+        margin-right: 1%;
+        background-color: #90B29A;
+    }
+    #answer-stripe2 {
+        background-color: #E8CA72;
+    }
+    #answer-stripe3 {
+        background-color: #E78271;
+    }
+    #answer-stripe4 {
+        background-color: #7C766A;
+    }
+    #answer-stripe5 {
+        background-color: #E8CA72;
+    }
+    #answer-stripe6 {
+        margin-left: 1%;
+        background-color: #E78271;
+    }
 }

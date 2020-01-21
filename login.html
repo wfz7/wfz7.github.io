@@ -6,7 +6,7 @@
     </head>
     <body id="login-body">
         <h1 id="login-title">QUERY</h1>
-        <form id="login-form" action="menu.html">
+        <form id="login-form" action="#" onsubmit="event.preventDefault(); return login();">
             <div id="username-div">
                 <label for="username">USERNAME</label>
                 <br>
@@ -17,6 +17,7 @@
                 <br>
                 <input type="password" name="password" id="password-input">
             </div>
+            <br>
             <input type="submit" value="enter">
         </form>
         <p>You don't have and account?</p>
@@ -29,5 +30,8 @@
             <div class='login-bottom-stripe' id="login-stripe5"></div>
             <div class='login-bottom-stripe' id="login-stripe6"></div>
         </div>
+        <script src="script.js"></script>
+        <script src="sha256.min.js"></script>
+        <script src="jquery-3.4.1.min.js"></script>
     </body>
 </html>

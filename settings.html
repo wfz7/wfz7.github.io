@@ -1,4 +1,4 @@
-<html>
+<html id="settings-html">
     <head>
         <title>QUERY - Settings</title>
         <link rel="stylesheet" href="style.css">
@@ -9,20 +9,67 @@
             <img src="Resources/Recurso 4.png">
         </button>
         <div id="settings-title">Settings</div>
-        <div>
         <div id="profile-block">
+            <img id="settings-pic" src="Resources/Recurso 6.png">
             <div id="profile-header">
                 ANA'S PROFILE
             </div>
-
+            <div id="profile-social">
+                @anasansegundo<br>anasansegundo@gmail.com
+                <img id="button-pic" src="Resources/Recurso 4.png">
+            </div>
         </div>
-
-            
+        <div id="preferences-block">
+            <div id="preferences-header">
+                Preferences
+            </div>
+            <div id="preferences">
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" name="sound" id="sound-checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <label class="preference-name" for="sound-checkbox">Sound</label>
+                </div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" checked="True" name="vibration" id="vibration-checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <label class="preference-name" for="vibration-checkbox">Vibration</label>
+                </div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" name="news" id="news-checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <label class="preference-name" for="news-checkbox">News by email</label>
+                </div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" checked="True" name="questions" id="questions-checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <label class="preference-name" for="questions-checkbox">Questions with images</label>
+                </div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" checked="True" name="visible" id="visible-checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <label class="preference-name" for="visible-checkbox">Visible to everybody</label>
+                </div>
+            </div>
         </div>
+        <button id="sign-out-button">
+            SIGN OUT
+        </button>
         <div id="bottom-navbar">
             <button onclick="window.location.href='profile.html';"><img src="Resources/Recurso 1.png" alt=""></button>
-            <button><img src="Resources/Recurso 2.png" alt=""></button>
+            <button onclick="window.location.href='menu.html';"><img src="Resources/Recurso 2.png" alt=""></button>
             <button onclick="window.location.href='settings.html';"><img src="Resources/Recurso 3.png" alt=""></button>
         </div>
+        <script src="script.js"></script>
+        <script src="jquery-3.4.1.min.js"></script>
     </body>
 </html>
