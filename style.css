@@ -1165,13 +1165,14 @@
     }
     #button-menu {
         margin-top: 2%;
+        margin-bottom: 10%;
         height: 50%;
     }
     #button-menu > button {
-        display: block;
-        width: 100%;
+        display: inline-block;
+        width: 49%;
         background-color: #E7D488;
-        margin: 1% 0;
+        /* margin: 1% 0; */
         padding: 3% 0;
         color: #7E7767;
         font-family: "Pacifico";
