@@ -1113,7 +1113,7 @@
         background-color: #90B29A;
         background-image: url('Resources/Recurso\ 5.png'), url('Resources/Elements.png'), url('Resources/TEXTURE.png');
         background-repeat: no-repeat, no-repeat, no-repeat;
-        background-size: 80%, cover, cover;
+        background-size: 30%, cover, cover;
         background-position-y: 50px, 0px, 0px;
         background-position-x: center, center, center;
     }

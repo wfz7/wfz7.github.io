@@ -281,6 +281,20 @@ function load_settings() {
     profile_header.text(username + "'S PROFILE");
     profile_social.html(ig + "<br>" + email);
 }
+function load_index() {
+    var loading_bar = $("#loading-bar div");
+    var width = 4;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 97) {
+        clearInterval(id);
+        window.location.href = '/login.html';
+      } else {
+        width++;
+        loading_bar.css("width", width+"%");
+      }
+    }
+}
 function page_loaded() {
     console.log('DOMContentLoaded');
     switch (window.location.pathname) {
@@ -324,9 +338,7 @@ function page_loaded() {
             break;
         case '/':
             console.log("Index loaded");
-            setTimeout(function(){
-                window.location.href = '/login.html';
-            }, 1000);
+            load_index();
             break;
         default:
             break;
