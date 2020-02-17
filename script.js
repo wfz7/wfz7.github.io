@@ -179,6 +179,9 @@ function random_game() {
     localStorage.setItem("play_against", random_player);
     window.location.href='spin.html';
 }
+function load_play_now() {
+    localStorage.setItem('answered_categories', '');
+}
 // Used in bf-list.html
 function load_bf_list(params) {
     var names = $("#best-friends-list button");
@@ -200,10 +203,64 @@ function load_spin() {
     var against_name = $("#spin-name-2");
     username.text(users.find(function(u){return u.id == userid})["username"]);
     against_name.text(localStorage.play_against);
+
+    if (localStorage.answered_categories) {
+        answered_categories = localStorage.answered_categories.split(';');
+
+        if (answered_categories.indexOf('entertainment') >= 0) {
+            var overlay = document.createElement('img');
+            overlay.setAttribute('style', 'position: absolute; top: 0; left: 0');
+            overlay.setAttribute('src', 'Resources/TopLeft2.png');
+            document.getElementsByClassName('spin-group')[0].getElementsByTagName('div')[0].appendChild(overlay);
+        }
+        if (answered_categories.indexOf('art') >= 0) {
+            var overlay = document.createElement('img');
+            overlay.setAttribute('style', 'position: absolute; top: 0; left: 0');
+            overlay.setAttribute('src', 'Resources/TopRight.png');
+            document.getElementsByClassName('spin-group')[0].getElementsByTagName('div')[0].appendChild(overlay);
+        }
+        if (answered_categories.indexOf('sports') >= 0) {
+            var overlay = document.createElement('img');
+            overlay.setAttribute('style', 'position: absolute; top: 0; left: 0');
+            overlay.setAttribute('src', 'Resources/BottomLeft.png');
+            document.getElementsByClassName('spin-group')[0].getElementsByTagName('div')[0].appendChild(overlay);
+        }
+        if (answered_categories.indexOf('geography') >= 0) {
+            var overlay = document.createElement('img');
+            overlay.setAttribute('style', 'position: absolute; top: 0; left: 0');
+            overlay.setAttribute('src', 'Resources/BottomRight.png');
+            document.getElementsByClassName('spin-group')[0].getElementsByTagName('div')[0].appendChild(overlay);
+        }
+    }
+
+    
 }
 function spin_the_wheel(image) {
     image.removeAttribute('style');
+    valid = false;
     var deg = 720 + Math.round(Math.random() * 360);
+    while (!valid) {
+        console.log('deg: '+deg);
+        valid = true;
+        if (localStorage.answered_categories) {
+            answered_categories = localStorage.answered_categories.split(';');
+            if ((answered_categories.indexOf('entertainment') >= 0)&&(deg%360 < 90)) {
+                valid = false;
+            }
+            if ((answered_categories.indexOf('art') >= 0)&&(deg%360 > 270)) {
+                valid = false;
+            }
+            if ((answered_categories.indexOf('sports') >= 0)&&(deg%360 >= 90 && deg%360 < 180)) {
+                valid = false;
+            }
+            if ((answered_categories.indexOf('geography') >= 0)&&(deg%360 >= 180 && deg%360 < 270)) {
+                valid = false;
+            }
+        }
+        if (!valid) {
+            var deg = 720 + Math.round(Math.random() * 360);
+        }
+    }
     var css = '-webkit-transform: rotate(' + deg + 'deg);';
     image.setAttribute("style", css);
     var category;
@@ -242,6 +299,18 @@ function load_question() {
 // Used in correct.html and incorrect.html
 function load_correct_incorrect() {
     category = localStorage.category;
+    if (window.location.pathname == "/correct.html"){
+        if (localStorage.answered_categories === undefined) {
+            localStorage.setItem('answered_categories', category);
+        }
+        if (localStorage.answered_categories.search(category) < 0) {
+            answered_categories = localStorage.answered_categories ? localStorage.answered_categories+';'+category : category;
+            localStorage.setItem('answered_categories', answered_categories);
+        }
+        if (localStorage.answered_categories.split(';').length >= 4) {
+            window.location.href = '/win.html';
+        }
+    }
     if (window.location.pathname == "/incorrect.html"){
         answer = localStorage.answer;
         $("#correct-incorrect-subtext").html("The correct answer was <br> " + answer);
@@ -320,16 +389,20 @@ function page_loaded() {
             break;
         case '/question.html':
             console.log("/question.html loaded");
-            load_question()
+            load_question();
             break;
         case '/correct.html':
         case '/incorrect.html':
             console.log("Correct/Incorrect loaded");
-            load_correct_incorrect()
+            load_correct_incorrect();
             break;
         case '/settings.html':
             console.log("/settings.html loaded");
-            load_settings()
+            load_settings();
+            break;
+        case '/play-now.html':
+            console.log('/play-now.html loaded');
+            load_play_now();
             break;
         case '/':
             console.log("Index loaded");
