@@ -236,6 +236,8 @@ function load_spin() {
     
 }
 function spin_the_wheel(image) {
+    var audio = new Audio('SOUNDS/398235__pooky1__wheel-spin-click-slow-down.wav');
+    audio.play();
     image.removeAttribute('style');
     valid = false;
     var deg = 720 + Math.round(Math.random() * 360);
@@ -308,7 +310,7 @@ function load_correct_incorrect() {
             localStorage.setItem('answered_categories', answered_categories);
         }
         if (localStorage.answered_categories.split(';').length >= 4) {
-            window.location.href = '/win.html';
+            setTimeout(() => {window.location.href = '/win.html'}, 1000)
         }
     }
     if (window.location.pathname == "/incorrect.html"){
@@ -348,7 +350,7 @@ function load_settings() {
 function load_index() {
     var loading_bar = $("#loading-bar div");
     var width = 4;
-    var id = setInterval(frame, 10);
+    var id = setInterval(frame, 15);
     function frame() {
       if (width >= 97) {
         clearInterval(id);
@@ -406,6 +408,10 @@ function page_loaded() {
             break;
         case '/':
             console.log("Index loaded");
+            window.location = '/intro.html';
+            break;
+        case '/intro.html':
+            console.log("Intro loaded");
             load_index();
             break;
         default:
